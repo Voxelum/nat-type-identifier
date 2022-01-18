@@ -5,9 +5,13 @@
   "main": "index.js",
   "types": "index.d.ts",
   "scripts": {
+    "build:cjs": "esbuild --outfile=dist/index.js --platform=node --format=cjs index.ts",
+    "build:esm": "esbuild --outfile=dist/index.mjs --platform=node --format=esm index.ts",
+    "test": "uvu -r esbuild-register tests",
     "start": "node index.js"
   },
   "dependencies": {
+    "@types/node": "^17.0.9",
     "binascii": "^0.0.2",
     "crypto-random-string": "^3.3.0"
   },
@@ -15,7 +19,12 @@
     "type": "git",
     "url": "https://github.com/Hutchison-Technologies/nat-type-identifier"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "esbuild": "^0.14.11",
+    "esbuild-register": "^3.3.2",
+    "typescript": "^4.5.4",
+    "uvu": "^0.5.3"
+  },
   "keywords": [
     "stun",
     "nat type"
