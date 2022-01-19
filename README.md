@@ -27,8 +27,8 @@ The return of execution will return the NAT type in use by the system running th
 - Open Internet
 - Full Cone
 - Symmetric UDP Firewall
-- Restric NAT
-- Restric Port NAT
+- Restrict NAT
+- Restrict Port NAT
 - Symmetric NAT
 ```
 
