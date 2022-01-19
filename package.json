@@ -1,25 +1,22 @@
 {
-  "name": "nat-type-identifier",
+  "name": "@xmcl/stun-client",
   "description": "A JavaScript implementation of PyStun used to identify the NAT type that the local system is behind.",
-  "version": "2.0.12",
-  "main": "index.js",
-  "types": "index.d.ts",
+  "version": "2.0.13",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
   "scripts": {
     "build:cjs": "esbuild --outfile=dist/index.js --platform=node --format=cjs index.ts",
     "build:esm": "esbuild --outfile=dist/index.mjs --platform=node --format=esm index.ts",
-    "test": "uvu -r esbuild-register tests",
-    "start": "node index.js"
-  },
-  "dependencies": {
-    "@types/node": "^17.0.9",
-    "binascii": "^0.0.2",
-    "crypto-random-string": "^3.3.0"
+    "build:type": "tsc --project tsconfig.json",
+    "test": "uvu -r esbuild-register tests"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/Hutchison-Technologies/nat-type-identifier"
+    "url": "https://github.com/voxelum/stun-client"
   },
   "devDependencies": {
+    "@types/node": "^17.0.9",
     "esbuild": "^0.14.11",
     "esbuild-register": "^3.3.2",
     "typescript": "^4.5.4",
@@ -30,5 +27,11 @@
     "nat type"
   ],
   "author": "Jeff W. Hughes @ Hutchison Technologies Ltd.",
+  "contributors": [
+    {
+      "email": "cijhn@hotmail.com",
+      "name": "ci010"
+    }
+  ],
   "license": "MIT"
 }

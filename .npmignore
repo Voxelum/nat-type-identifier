@@ -1,0 +1,5 @@
+/tests
+*.ts
+*.yaml
+tsconfgi.json
+!/dist/*.ts
